@@ -17,8 +17,6 @@ def plot_vector_as_image(image, h, w):
 def get_pictures_by_name(name = None):
 	"""
 	Given a name returns all the pictures of the person with this specific name.
-	YOU CAN CHANGE THIS FUNCTION!
-	THIS IS JUST AN EXAMPLE, FEEL FREE TO CHANGE IT!
 	"""
 	lfw_people = load_data()
 	selected_images = []
