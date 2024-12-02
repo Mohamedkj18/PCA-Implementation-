@@ -3,7 +3,7 @@ In this Assignment I used PCA on pictures of faces.
 As a necessary first step I was asked to implement PCA without the use of the Sklearn
 PCA method (or any other package that implements PCA). 
 
-Afterwards, I selected one ranfom person with enough pictures (> 50) from the pool of people. I implemented  a
+Afterwards, I selected one random person with enough pictures (> 50) from the pool of people. I implemented  a
 utility function that will help load pictures of a specific person.
 
 Then I Constructed a matrix X whose rows are the flattened images of this person. 
