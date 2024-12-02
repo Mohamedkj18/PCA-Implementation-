@@ -5,7 +5,7 @@ import numpy as np
 
 def plot_vector_as_image(image, h, w):
 	"""
-	utility function to plot a vector as image.
+	function to plot a vector as image.
 	Args:
 	image - vector of pixels
 	h, w - dimesnions of original pi
@@ -31,14 +31,10 @@ def get_pictures_by_name(name = None):
 	return selected_images, h, w
 
 def load_data():
-	# Don't change the resize factor!!!
 	lfw_people = fetch_lfw_people(min_faces_per_person=51, resize=0.4)
 	return lfw_people
 
-######################################################################################
-"""
-Other then the PCA function below the rest of the functions are yours to change.
-"""
+
 
 def PCA(X, k):
 	"""
@@ -62,7 +58,8 @@ def PCA(X, k):
 	return V[:k], S[:k]
 
 
-def B():
+def experiment_1():
+	"""In this experiment we reduce the matrix dimention to 10, and plot the pictures"""
 	person , h, w = get_pictures_by_name()
 	twoD_list = [[item[0] for item in picture] for picture in person ]
 	matrix =np.array(twoD_list)
@@ -70,7 +67,9 @@ def B():
 	for ev in V:	
 		plot_vector_as_image(ev, h, w)
 
-def C():
+def experiment_2():
+	"""In this experiment we reduce the matrix dimention to each k in {1,5,10,15,30,50,100}, plot the pictures 
+	and compute the sum of the norms and plot it as a function of k"""
 	person , h, w = get_pictures_by_name()
 	twoD_list = [[item[0] for item in picture] for picture in person ]
 	matrix =np.array(twoD_list)
@@ -93,7 +92,7 @@ def C():
 	
 
 if __name__ == "__main__":
-	B()
-	C()
+	experiment_1()
+	experiment_2()
 
 
